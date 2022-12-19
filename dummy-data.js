@@ -5,7 +5,7 @@ const DUMMY_EVENTS = [
     description:
       'Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.',
     location: 'Somestreet 25, 12345 San Somewhereo',
-    date: '202 1-05-12',
+    date: '2021-05-12',
     image: 'images/coding-event.jpg',
     isFeatured: false,
   },
@@ -44,7 +44,9 @@ export function getFilteredEvents(dateFilter) {
 
   let filteredEvents = DUMMY_EVENTS.filter((event) => {
     const eventDate = new Date(event.date);
-    return eventDate.getFullYear() === year && eventDate.getMonth() === month - 1;
+    return (
+      eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
+    );
   });
 
   return filteredEvents;

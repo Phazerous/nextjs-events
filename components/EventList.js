@@ -1,4 +1,4 @@
-import EventItem from "./EventItem";
+import EventItem from './EventItem';
 import style from '../styles/EventList.module.css';
 
 export default function EventList({ items }) {
@@ -11,7 +11,8 @@ export default function EventList({ items }) {
           image={event.image}
           date={event.date}
           location={event.location}
-          id={event.id} />
+          id={event.id}
+        />
       ))}
     </ul>
   );
