@@ -10,11 +10,11 @@ export default function EventItem(props) {
   const humanReadableData = new Date(date).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'long',
-    year: 'numeric'
+    year: 'numeric',
   });
 
   const formattedAddress = location.replace(',', '\n');
-  const exploreLink = `/events/${id}`
+  const exploreLink = `/events/${id}`;
 
   return (
     <li className={style.item}>
@@ -41,5 +41,5 @@ export default function EventItem(props) {
         </div>
       </div>
     </li>
-  )
+  );
 }
